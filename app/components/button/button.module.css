@@ -1,0 +1,20 @@
+.button {
+  border: none;
+  background-color: transparent;
+  .buttonContainer {
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 1rem;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 170px;
+    .textButton {
+        font-weight: 500;
+        font-size: 0.9rem;
+        @media screen and (width >= 768px) {
+          font-size: 1rem;
+        }
+    }
+  }
+}

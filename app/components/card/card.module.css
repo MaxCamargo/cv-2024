@@ -1,0 +1,110 @@
+.card {
+  border: 1px solid var(--neutral-gray-100);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1.6rem;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  background: #fafafa;
+  .headerCard {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .icons {
+      display: flex;
+      gap: 0.3rem;
+    }
+    .headerTitle {
+      color: var(--neutral-gray-300);
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration-color: var(--neutral-gray-300);
+      text-decoration-style: dotted;
+      text-decoration-thickness: 2px;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      &:hover {
+        color: var(--accent-green-500);
+        text-decoration-color: var(--accent-green-500);
+        transition: color 0.2s;
+      }
+      @media screen and (width >= 768px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .descriptionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .description {
+      display: flex;
+      font-size: 0.9rem;
+      @media screen and (width >= 768px) {
+        font-size: 1rem;
+      }
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      .tag {
+        align-items: center;
+        display: flex;
+        gap: 0.3rem;
+        width: fit-content;
+        font-size: 0.7rem;
+        font-weight: 500;
+        padding: 0.1rem 0.3rem;
+        .circle {
+          width: 0.9rem;
+          height: 0.9rem;
+          background-color: var(--accent-green-500);
+          border-radius: 50%;
+          &.typescript {
+            background: linear-gradient(-90deg, #64de7e, #00cb2d);
+          }
+          &.react,
+          &.redux {
+            background: linear-gradient(-90deg, #050505, #E9E9E9);
+          }
+          &.cssModule {
+            background: linear-gradient(-90deg, #fb8c00, #f83600);
+          }
+          &.cssInJS,
+          &.tailwind {
+            background: linear-gradient(-90deg, #ff7a00, #ffc590);
+          }
+        }
+      }
+      .normal,
+      .typescript,
+      .react,
+      .cssModule,
+      .redux,
+      .cssInJS,
+      .tailwind {
+        border-radius: 60px;
+        border: 1px solid var(--neutral-gray-300);
+      }
+      .typescript {
+        border: 1px solid var(--accent-green-500);
+      }
+      .react,
+      .redux {
+        border: 1px solid var(--neutral-gray-300);
+      }
+      .cssModule {
+        border: 1px solid var(--accent-red-500);
+      }
+      .cssInJS,
+      .tailwind {
+        border: 1px solid var(--accent-orange-500);
+      }
+    }
+  }
+}
